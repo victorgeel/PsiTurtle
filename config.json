@@ -1,0 +1,32 @@
+{
+	"ProxyRotator": {
+		"Port": "9693"
+	},
+	"Inject": {
+		"Enable": true,
+		"Type": 1,
+		"Port": "8989",
+		"Rules": {
+			"*:*": [
+				"*:*"
+			]
+		},
+		"Payload": "",
+		"ServerNameIndication": "",
+		"MeekType": 0,
+		"Timeout": 5,
+		"ShowLog": true
+	},
+	"PsiphonCore": 5,
+	"Psiphon": {
+		"CoreName": "run",
+		"Tunnel": 1,
+		"Region": "",
+		"Protocols": [
+			"FRONTED-MEEK-HTTP-OSSH"
+		],
+		"TunnelWorkers": 8,
+		"KuotaDataLimit": 0,
+		"Authorizations": ["eyJBdXRob3JpemF0aW9uIjp7IklEIjoiWUFwa0d1UFFPUCtjQmQyZzNKNjcwL1lPMVJxd2hwc3RpTHVDQnhBYlRWdz0iLCJBY2Nlc3NUeXBlIjoiZ29vZ2xlLXN1YnNjcmlwdGlvbiIsIkV4cGlyZXMiOiIyMDI0LTAxLTI4VDE2OjMwOjUwWiJ9LCJTaWduaW5nS2V5SUQiOiJSY1g1K0pBZVVPam9XY0hvajQ1NjhYc1ZsQWJzMFFhc0FqKzFBRDYrbndRPSIsIlNpZ25hdHVyZSI6IkdBemphbmJ5aDAybnExZk5Fa1dlbmZrU21yWXJSL2NLdXhZVnhPY3lwYXJSUUljcThEWXZnejBpMHNmZzE0blNzbFZKVU1HSk55TEszT1dkR1RXa0RRPT0ifQ=="]
+	}
+}
