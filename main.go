@@ -47,7 +47,7 @@ func init() {
 }
 
 func GetConfigPath(filename string) string {
-	return libutils.GetConfigPath("brainfuck-psiphon-pro-go", filename)
+	return libutils.GetConfigPath("PsiTurtle-run", filename)
 }
 
 func main() {
