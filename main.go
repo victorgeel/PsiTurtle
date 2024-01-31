@@ -17,11 +17,11 @@ import (
 )
 
 const (
-	    appName        = "•Psiphon-Unlimited•"
+	    appName    = "•Psiphon-Unlimited•"
         appVersionName = "Psi-pro-Mod"
         appVersionCode = "1.02.102724"
 
-        ReleaseYear   = "2024"
+        ReleaseYear    = "2024"
         ModifiedAuthor = "••Victor⌐⁠■⁠-⁠■ Geek••"
 )
 
@@ -54,7 +54,7 @@ func main() {
 	liblog.Header(
 		[]string{
 			fmt.Sprintf("%s [%s Version. %s]", appName, appVersionName, appVersionCode),
-			fmt.Sprintf("(©) %s %s.", copyrightYear, copyrightAuthor),
+			fmt.Sprintf("(©) %s %s.", ReleaseYear, ModifiedAuthor),
 		},
 		liblog.Colors["Y1"],
 	)
@@ -66,8 +66,9 @@ func main() {
 	defaultConfig.Inject.Type = 2
 	defaultConfig.Inject.Rules = map[string][]string{
 		"akamai.net:80": []string{
-			           "www.pubgmobile.com",
-                        "m.mobilelegends.com",                                        "a1815.dscv.akamai.net",
+			"www.pubgmobile.com",
+                        "m.mobilelegends.com",
+			"a1815.dscv.akamai.net",
                         "a1845.dscb.akamai.net",
                         "a1815.dscb.akamai.net",
                         "m.mobilelegends.com.akamaized.net",
@@ -152,7 +153,7 @@ func main() {
 					"|\n",
 				config.Psiphon.CoreName,
 			),
-			"INFO", liblog.Colors["P1"],
+			"INFO", liblog.Colors["M1"],
 		)
 		return
 	}
