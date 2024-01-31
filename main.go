@@ -20,7 +20,6 @@ const (
 	    appName    = "•Psiphon-Unlimited•"
         appVersionName = "Psi-pro-Mod"
         appVersionCode = "1.02.102724"
-
         ReleaseYear    = "2024"
         ModifiedAuthor = "••Victor⌐⁠■⁠-⁠■ Geek••"
 )
@@ -66,7 +65,7 @@ func main() {
 	defaultConfig.Inject.Type = 2
 	defaultConfig.Inject.Rules = map[string][]string{
 		"akamai.net:80": []string{
-			"www.pubgmobile.com",
+		        "www.pubgmobile.com",
                         "m.mobilelegends.com",
 			"a1815.dscv.akamai.net",
                         "a1845.dscb.akamai.net",
@@ -76,11 +75,19 @@ func main() {
                         "play.mobilelegends.com",
                         "www.pubgmobile.com.cdn.ettdnsv.com",
                         "www.pubgmobile.com.edgesuite.net",
+			"video.iflix.com",
+			"videocdn-2.iflix.com",
+			"iflix-videocdn-p1.akamaized.net",
+			"iflix-videocdn-p2.akamaized.net",
+			"iflix-videocdn-p3.akamaized.net",
+			"iflix-videocdn-p6.akamaized.net",
+			"iflix-videocdn-p7.akamaized.net",
+			"iflix-videocdn-p8.akamaized.net",
                 },
 	}
 	defaultConfig.Inject.Payload = ""
 	defaultConfig.Inject.Timeout = 5
-	defaultConfig.PsiphonCore = 6
+	defaultConfig.PsiphonCore = 4
 	defaultConfig.Psiphon = libpsiphon.DefaultConfig
 
 	if runtime.GOOS == "windows" {
