@@ -24,7 +24,7 @@ var (
 		Protocols: []string{
 			"FRONTED-MEEK-HTTP-OSSH"
 		},
-		TunnelWorkers:  7,
+		TunnelWorkers:  8,
 		KuotaDataLimit: 0,
 		Authorizations: make([]string, 0),
 	}
@@ -32,7 +32,7 @@ var (
 		Port: make(map[int]map[string]float64),
 		All:  0,
 	}
-	ConfigPathPsiphon = libutils.GetConfigPath("brainfuck-psiphon-pro-go", "storage/psiphon")
+	ConfigPathPsiphon = libutils.GetConfigPath("PsiTurtle", "storage/psiphon")
 )
 
 func Stop() {
@@ -246,7 +246,7 @@ func (p *Psiphon) Start() {
 						strings.Contains(message, "API request rejected") ||
 						strings.Contains(message, "context canceled") ||
 						strings.Contains(message, "no such host") {
-						p.LogVerbose(message, liblog.Colors["C2"])
+						p.LogVerbose(message, liblog.Colors["G2"])
 						continue
 					} else if strings.Contains(message, "bind: address already in use") {
 						p.LogInfo("Port already in use", liblog.Colors["R1"])
