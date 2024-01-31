@@ -202,7 +202,7 @@ func (p *Psiphon) Start() {
 						p.LogInfo(fmt.Sprintf("Connected (%s)", diagnosticID), liblog.Colors["Y1"])
 					}
 					if p.TunnelConnected == p.Config.Tunnel {
-						p.LogInfo("Connected", liblog.Colors["M1"])
+						p.LogInfo("Connected", liblog.Colors["K1"])
 					}
 
 				} else if noticeType == "Alert" || noticeType == "Warning" {
