@@ -17,11 +17,11 @@ import (
 )
 
 const (
-	    appName    = "•Psiphon-Unlimited•"
+	    appName    = "UNLIMITED PSIPHON"
         appVersionName = "Psi-pro-Mod"
         appVersionCode = "1.02.102724"
         ReleaseYear    = "2024"
-        ModifiedAuthor = "••Victor⌐⁠■⁠-⁠■ Geek••"
+        ModifiedAuthor = "Victor®Geek"
 )
 
 var (
@@ -55,7 +55,7 @@ func main() {
 			fmt.Sprintf("%s [%s Version. %s]", appName, appVersionName, appVersionCode),
 			fmt.Sprintf("(©) %s %s.", ReleaseYear, ModifiedAuthor),
 		},
-		liblog.Colors["Y1"],
+		liblog.Colors["B1"],
 	)
 
 	config := new(Config)
@@ -148,8 +148,8 @@ func main() {
 
 	time.Sleep(200 * time.Millisecond)
 
-	liblog.LogInfo("Domain Fronting running on port "+Inject.Config.Port, "INFO", liblog.Colors["B1"])
-	liblog.LogInfo("Proxy Rotator running on port "+ProxyRotator.Config.Port, "INFO", liblog.Colors["B1"])
+	liblog.LogInfo("Domain Fronting running on port "+Inject.Config.Port, "INFO", liblog.Colors["M1"])
+	liblog.LogInfo("Proxy Rotator running on port "+ProxyRotator.Config.Port, "INFO", liblog.Colors["M1"])
 
 	if _, err := os.Stat(libutils.RealPath(config.Psiphon.CoreName)); os.IsNotExist(err) {
 		liblog.LogInfo(
@@ -160,7 +160,7 @@ func main() {
 					"|\n",
 				config.Psiphon.CoreName,
 			),
-			"INFO", liblog.Colors["M1"],
+			"INFO", liblog.Colors["Y1"],
 		)
 		return
 	}
