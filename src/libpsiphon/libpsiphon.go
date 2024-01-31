@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/victorgeel/log"
-	"github.com/victorgeel/pxro"
-	"github.com/aztecrabbit/libutils"
+	"github.com/madiunprogramer/libproxyrotator"
+	"github.com/victorgeel/libutils"
 )
 
 var (
