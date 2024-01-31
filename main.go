@@ -11,7 +11,7 @@ import (
 	"github.com/victorgeel/PsiTurtle/src/libpsiphon"
 	"github.com/victorgeel/libinject"
 	"github.com/victorgeel/liblog"
-	"github.com/victorgeel/proxyrotator"
+	"github.com/aztecrabbit/libproxyrotator"
 	"github.com/aztecrabbit/libredsocks"
 	"github.com/victorgeel/libutils"
 )
