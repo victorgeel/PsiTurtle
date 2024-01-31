@@ -191,7 +191,7 @@ func (p *Psiphon) Start() {
 							libutils.BytesToSize(p.KuotaData.Port[p.ListenPort][diagnosticID]),
 							libutils.BytesToSize(p.KuotaData.All),
 						),
-						liblog.Colors["C1"],
+						liblog.Colors["G1"],
 					)
 
 				} else if noticeType == "ActiveTunnel" {
@@ -202,7 +202,7 @@ func (p *Psiphon) Start() {
 						p.LogInfo(fmt.Sprintf("Connected (%s)", diagnosticID), liblog.Colors["Y1"])
 					}
 					if p.TunnelConnected == p.Config.Tunnel {
-						p.LogInfo("Connected", liblog.Colors["P1"])
+						p.LogInfo("Connected", liblog.Colors["M1"])
 					}
 
 				} else if noticeType == "Alert" || noticeType == "Warning" {
@@ -225,7 +225,7 @@ func (p *Psiphon) Start() {
 						strings.Contains(message, "underlying conn is closed") ||
 						strings.Contains(message, "duplicate tunnel:") ||
 						strings.Contains(message, "tunnel failed:") {
-						p.LogVerbose(text, liblog.Colors["R1"])
+						p.LogVerbose(text, liblog.Colors["P1"])
 						break
 					} else if strings.Contains(message, "A connection attempt failed because the connected party did not properly respond after a period of time") ||
 						strings.Contains(message, "No connection could be made because the target machine actively refused it") ||
