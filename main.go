@@ -12,7 +12,7 @@ import (
 	"github.com/victorgeel/libinject"
 	"github.com/victorgeel/liblog"
 	"github.com/victorgeel/proxyrotator"
-	"github.com/victorgeel/libredsocks"
+	"github.com/aztecrabbit/libredsocks"
 	"github.com/victorgeel/libutils"
 )
 
