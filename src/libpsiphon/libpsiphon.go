@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/victorgeel/liblog"
-	"github.com/madiunprogramer/libproxyrotator"
+	"github.com/victorgeel/proxyrotator"
 	"github.com/victorgeel/libutils"
 )
 
