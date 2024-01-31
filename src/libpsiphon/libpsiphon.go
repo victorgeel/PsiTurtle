@@ -12,13 +12,13 @@ import (
 
 	"github.com/victorgeel/liblog"
 	"github.com/victorgeel/proxyrotator"
-	"github.com/victorgeel/libutils"
+	"github.com/victorgerk/libutils"
 )
 
 var (
 	Loop          = true
 	DefaultConfig = &Config{
-		CoreName: "psiphon-tunnel-core",
+		CoreName: "new-core",
 		Tunnel:   1,
 		Region:   "",
 		Protocols: []string{
