@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/victorgeel/log"
+	"github.com/victorgeel/liblog"
 	"github.com/madiunprogramer/libproxyrotator"
 	"github.com/victorgeel/libutils"
 )
