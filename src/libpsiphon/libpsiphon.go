@@ -18,7 +18,7 @@ import (
 var (
 	Loop          = true
 	DefaultConfig = &Config{
-		CoreName: "new-core",
+		CoreName: "core",
 		Tunnel:   1,
 		Region:   "",
 		Protocols: []string{
@@ -142,7 +142,7 @@ func (p *Psiphon) Start() {
 		)
 	}
 
-	p.LogInfo("Connecting", liblog.Colors["B1"])
+	p.LogInfo("Connecting", liblog.Colors["P1"])
 
 	for Loop {
 		p.KuotaData.Port[p.ListenPort] = make(map[string]float64)
@@ -277,6 +277,6 @@ func (p *Psiphon) Start() {
 
 		time.Sleep(200 * time.Millisecond)
 
-		p.LogInfo(fmt.Sprintf("Reconnecting (%s)", libutils.BytesToSize(p.KuotaData.Port[p.ListenPort]["all"])), liblog.Colors["G1"])
+		p.LogInfo(fmt.Sprintf("Reconnecting (%s)", libutils.BytesToSize(p.KuotaData.Port[p.ListenPort]["all"])), liblog.Colors["O1"])
 	}
 }
