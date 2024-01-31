@@ -22,7 +22,7 @@ var (
 		Tunnel:   1,
 		Region:   "",
 		Protocols: []string{
-			"FRONTED-MEEK-HTTP-OSSH"
+			"FRONTED-MEEK-HTTP-OSSH",
 		},
 		TunnelWorkers:  8,
 		KuotaDataLimit: 0,
