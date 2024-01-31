@@ -92,7 +92,7 @@ func (p *Psiphon) LogInfo(message string, color string) {
 
 func (p *Psiphon) LogVerbose(message string, color string) {
 	if p.Verbose {
-		p.LogInfo(fmt.Sprintf("%[1]sVERBOSE%[3]s %[2]s::%[3]s %[1]s", color, liblog.Colors["P1"], liblog.Colors["CC"])+message, color)
+		p.LogInfo(fmt.Sprintf("%[1]sVERBOSE%[3]s %[2]s::%[3]s %[1]s", color, liblog.Colors["G1"], liblog.Colors["CC"])+message, color)
 	}
 }
 
@@ -277,6 +277,6 @@ func (p *Psiphon) Start() {
 
 		time.Sleep(200 * time.Millisecond)
 
-		p.LogInfo(fmt.Sprintf("Reconnecting (%s)", libutils.BytesToSize(p.KuotaData.Port[p.ListenPort]["all"])), liblog.Colors["O1"])
+		p.LogInfo(fmt.Sprintf("Reconnecting (%s)", libutils.BytesToSize(p.KuotaData.Port[p.ListenPort]["all"])), liblog.Colors["M1"])
 	}
 }
