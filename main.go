@@ -13,7 +13,7 @@ import (
 	"github.com/victorgeel/liblog"
 	"github.com/victorgeel/proxyrotator"
 	"github.com/victorgeel/libredsocks"
-	"github.com/victorgerk/libutils"
+	"github.com/victorgeel/libutils"
 )
 
 const (
