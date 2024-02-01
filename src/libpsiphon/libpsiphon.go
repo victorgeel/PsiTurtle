@@ -23,6 +23,7 @@ var (
 		Region:   "",
 		Protocols: []string{
 			"FRONTED-MEEK-HTTP-OSSH",
+			"FRONTED-MEEK-OSSH",
 		},
 		TunnelWorkers:  8,
 		KuotaDataLimit: 0,
@@ -142,7 +143,7 @@ func (p *Psiphon) Start() {
 		)
 	}
 
-	p.LogInfo("Connecting", liblog.Colors["P1"])
+	p.LogInfo("Connecting", liblog.Colors["Y1"])
 
 	for Loop {
 		p.KuotaData.Port[p.ListenPort] = make(map[string]float64)
@@ -202,7 +203,7 @@ func (p *Psiphon) Start() {
 						p.LogInfo(fmt.Sprintf("Connected (%s)", diagnosticID), liblog.Colors["Y1"])
 					}
 					if p.TunnelConnected == p.Config.Tunnel {
-						p.LogInfo("Connected", liblog.Colors["K1"])
+						p.LogInfo("Connected", liblog.Colors["G1"])
 					}
 
 				} else if noticeType == "Alert" || noticeType == "Warning" {
@@ -225,7 +226,7 @@ func (p *Psiphon) Start() {
 						strings.Contains(message, "underlying conn is closed") ||
 						strings.Contains(message, "duplicate tunnel:") ||
 						strings.Contains(message, "tunnel failed:") {
-						p.LogVerbose(text, liblog.Colors["P1"])
+						p.LogVerbose(text, liblog.Colors["W1"])
 						break
 					} else if strings.Contains(message, "A connection attempt failed because the connected party did not properly respond after a period of time") ||
 						strings.Contains(message, "No connection could be made because the target machine actively refused it") ||
@@ -246,7 +247,7 @@ func (p *Psiphon) Start() {
 						strings.Contains(message, "API request rejected") ||
 						strings.Contains(message, "context canceled") ||
 						strings.Contains(message, "no such host") {
-						p.LogVerbose(message, liblog.Colors["G2"])
+						p.LogVerbose(message, liblog.Colors["B2"])
 						continue
 					} else if strings.Contains(message, "bind: address already in use") {
 						p.LogInfo("Port already in use", liblog.Colors["R1"])
@@ -277,6 +278,6 @@ func (p *Psiphon) Start() {
 
 		time.Sleep(200 * time.Millisecond)
 
-		p.LogInfo(fmt.Sprintf("Reconnecting (%s)", libutils.BytesToSize(p.KuotaData.Port[p.ListenPort]["all"])), liblog.Colors["M1"])
+		p.LogInfo(fmt.Sprintf("Reconnecting (%s)", libutils.BytesToSize(p.KuotaData.Port[p.ListenPort]["all"])), liblog.Colors["G1"])
 	}
 }
