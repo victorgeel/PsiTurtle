@@ -143,7 +143,7 @@ func (p *Psiphon) Start() {
 		)
 	}
 
-	p.LogInfo("Connecting", liblog.Colors["BG_BLUE"])
+	p.LogInfo("Connecting", liblog.Colors["G1"])
 
 	for Loop {
 		p.KuotaData.Port[p.ListenPort] = make(map[string]float64)
@@ -200,10 +200,10 @@ func (p *Psiphon) Start() {
 					p.TunnelConnected++
 					if p.Config.Tunnel > 1 {
 						diagnosticID := line["data"].(map[string]interface{})["diagnosticID"].(string)
-						p.LogInfo(fmt.Sprintf("Connected (%s)", diagnosticID), liblog.Colors["Y1"])
+						p.LogInfo(fmt.Sprintf("Connected (%s)", diagnosticID), liblog.Colors["BG_BLUE"])
 					}
 					if p.TunnelConnected == p.Config.Tunnel {
-						p.LogInfo("Connected", liblog.Colors["G1"])
+						p.LogInfo("Connected", liblog.Colors["R1"])
 					}
 
 				} else if noticeType == "Alert" || noticeType == "Warning" {
