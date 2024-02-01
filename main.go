@@ -55,7 +55,7 @@ func main() {
 			fmt.Sprintf("%s [%s Version. %s]", appName, appVersionName, appVersionCode),
 			fmt.Sprintf("(©) %s %s.", ReleaseYear, ModifiedAuthor),
 		},
-		liblog.Colors["BG_MAGENTA"],
+		liblog.Colors["BG_CYAN"],
 	)
 
 	config := new(Config)
@@ -148,8 +148,8 @@ func main() {
 
 	time.Sleep(200 * time.Millisecond)
 
-	liblog.LogInfo("Domain Fronting running on port "+Inject.Config.Port, "INFO", liblog.Colors["M1"])
-	liblog.LogInfo("Proxy Rotator running on port "+ProxyRotator.Config.Port, "INFO", liblog.Colors["M1"])
+	liblog.LogInfo("Domain Fronting running on port "+Inject.Config.Port, "INFO", liblog.Colors["Y1"])
+	liblog.LogInfo("Proxy Rotator running on port "+ProxyRotator.Config.Port, "INFO", liblog.Colors["Y1"])
 
 	if _, err := os.Stat(libutils.RealPath(config.Psiphon.CoreName)); os.IsNotExist(err) {
 		liblog.LogInfo(
@@ -160,7 +160,7 @@ func main() {
 					"|\n",
 				config.Psiphon.CoreName,
 			),
-			"INFO", liblog.Colors["P1"],
+			"INFO", liblog.Colors["B1"],
 		)
 		return
 	}
