@@ -143,7 +143,7 @@ func (p *Psiphon) Start() {
 		)
 	}
 
-	p.LogInfo("Connecting", liblog.Colors["Y1"])
+	p.LogInfo("Connecting", liblog.Colors["BG_BLUE"])
 
 	for Loop {
 		p.KuotaData.Port[p.ListenPort] = make(map[string]float64)
