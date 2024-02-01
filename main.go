@@ -160,7 +160,7 @@ func main() {
 					"|\n",
 				config.Psiphon.CoreName,
 			),
-			"INFO", liblog.Colors["B1"],
+			"INFO", liblog.Colors["BG_WHITE"],
 		)
 		return
 	}
