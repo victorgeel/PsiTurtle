@@ -55,7 +55,7 @@ func main() {
 			fmt.Sprintf("%s [%s Version. %s]", appName, appVersionName, appVersionCode),
 			fmt.Sprintf("(©) %s %s.", ReleaseYear, ModifiedAuthor),
 		},
-		liblog.Colors["Y1"],
+		liblog.Colors["BG_MAGENTA"],
 	)
 
 	config := new(Config)
