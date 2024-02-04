@@ -17,7 +17,12 @@ import (
 )
 
 const (
-	    appName    = "UNLIMITED PSIPHON"
+	    appName    = "______ _____ ______ _______
+                     ✪✪ / _   // ___//_   _//___    /
+                        / /_/ // ___   /  /       / /
+                       /  ___//__  /  /  /       / /
+                      /  /   __ / /_ /  /_      / /____
+                     /__/   /____//______//✪✪//______/ ✪✪"
         appVersionName = "Psi-pro-Mod"
         appVersionCode = "1.0.102724"
         ReleaseYear    = "2024"
